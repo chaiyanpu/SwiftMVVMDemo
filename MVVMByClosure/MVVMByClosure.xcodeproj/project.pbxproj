@@ -18,6 +18,8 @@
 		E640A77B1DEC503A004ADB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77A1DEC503A004ADB64 /* Model.swift */; };
 		E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77C1DEC5184004ADB64 /* CustomCell.swift */; };
 		E640A77F1DEC5184004ADB64 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E640A77D1DEC5184004ADB64 /* CustomCell.xib */; };
+		E640A7811DEC565A004ADB64 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7801DEC565A004ADB64 /* Observable.swift */; };
+		E640A7831DEC5AEE004ADB64 /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,8 @@
 		E640A77A1DEC503A004ADB64 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		E640A77C1DEC5184004ADB64 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E640A77D1DEC5184004ADB64 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
+		E640A7801DEC565A004ADB64 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +109,16 @@
 		E640A7491DEC4FC4004ADB64 /* MVVMByClosure */ = {
 			isa = PBXGroup;
 			children = (
-				E640A74A1DEC4FC4004ADB64 /* AppDelegate.swift */,
+				E640A7801DEC565A004ADB64 /* Observable.swift */,
 				E640A77C1DEC5184004ADB64 /* CustomCell.swift */,
 				E640A77D1DEC5184004ADB64 /* CustomCell.xib */,
 				E640A74C1DEC4FC4004ADB64 /* ViewController.swift */,
+				E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */,
 				E640A7781DEC5011004ADB64 /* ViewModel.swift */,
 				E640A77A1DEC503A004ADB64 /* Model.swift */,
 				E640A74E1DEC4FC4004ADB64 /* Main.storyboard */,
 				E640A7511DEC4FC4004ADB64 /* Assets.xcassets */,
+				E640A74A1DEC4FC4004ADB64 /* AppDelegate.swift */,
 				E640A7531DEC4FC4004ADB64 /* LaunchScreen.storyboard */,
 				E640A7561DEC4FC4004ADB64 /* Info.plist */,
 			);
@@ -275,10 +281,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E640A7831DEC5AEE004ADB64 /* ControllerHelper.swift in Sources */,
 				E640A74D1DEC4FC4004ADB64 /* ViewController.swift in Sources */,
 				E640A7791DEC5011004ADB64 /* ViewModel.swift in Sources */,
 				E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */,
 				E640A74B1DEC4FC4004ADB64 /* AppDelegate.swift in Sources */,
+				E640A7811DEC565A004ADB64 /* Observable.swift in Sources */,
 				E640A77B1DEC503A004ADB64 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

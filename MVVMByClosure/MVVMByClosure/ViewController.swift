@@ -11,38 +11,37 @@ import UIKit
 class ViewController: UIViewController {
 
     var aTableView:UITableView!
-    var dataSource:[ViewModel]?
+    var helper:ControllerHelper!
     override func viewDidLoad() {
+        super.viewDidLoad()
         
         aTableView = UITableView(frame: self.view.bounds, style:.plain)
-        
-//        aTableView.delegate = self
         aTableView.dataSource = self
-        
         self.view.addSubview(aTableView)
         
+        helper = ControllerHelper()
         
-        
-        super.viewDidLoad()
+        helper.requestData(completion: {
+            self.aTableView.reloadData()
+        })
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
 
-
 }
+
 extension ViewController:UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource?.count ?? 0
+        return helper.dataSource?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = CustomCell.getCustomCell(tableView: tableView)
-        
-        
+        cell.viewModel = helper.dataSource?[indexPath.row]
         
         return cell
     }
