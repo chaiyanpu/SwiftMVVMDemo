@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     var aTableView:UITableView!
-    var helper:ControllerHelper!
+    var viewModel:ViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -19,9 +19,9 @@ class ViewController: UIViewController {
         aTableView.dataSource = self
         self.view.addSubview(aTableView)
         
-        helper = ControllerHelper()
+        viewModel = ViewModel()
         
-        helper.requestData(completion: {
+        viewModel.requestData(completion: {
             self.aTableView.reloadData()
         })
     }
@@ -35,13 +35,13 @@ class ViewController: UIViewController {
 extension ViewController:UITableViewDataSource{
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return helper.dataSource?.count ?? 0
+        return viewModel.cellDatas?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = CustomCell.getCustomCell(tableView: tableView)
-        cell.viewModel = helper.dataSource?[indexPath.row]
+        cell.viewModel = viewModel.cellDatas?[indexPath.row]
         
         return cell
     }

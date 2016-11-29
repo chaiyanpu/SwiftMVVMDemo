@@ -1,34 +1,33 @@
 //
-//  ViewModel.swift
+//  ControllerHelper.swift
 //  MVVMByClosure
 //
 //  Created by chai on 2016/11/28.
 //  Copyright © 2016年 chaiyanpu. All rights reserved.
-//  ViewModel
+//  Business
 
-import Foundation
+import UIKit
 
 class ViewModel{
     
-    private let emptyString = ""
+    var cellDatas:[CellViewModel]?
     
-    var imageAdress:Observable<String?>
+    func requestData(completion:()->()){
+        self.getData { array in
+            for d in array{
+//                let model = Model(d["1"] ?? "", lableOneText: d["2"] ?? "", lableTwoText: d["3"] ?? "", labelThreeText: d["4"] ?? "")
+//                
+//                cellDatas?.append(viewModel)
+            }
+            completion()
+        }
+    }
     
-    var lableOneText:Observable<String>
-    
-    var lableTwoText:Observable<String>
-    
-    var labelThreeText:Observable<String>
-    
-    init() {
-        imageAdress = Observable(emptyString)
-        lableOneText = Observable(emptyString)
-        lableTwoText = Observable(emptyString)
-        labelThreeText = Observable(emptyString)
+    ///请求
+    func getData(completion:(_ array:[[String:String]])->()){
+        let array = [["1":"1","2":"2","3":"3","4":"4"],["1":"1","2":"2","3":"3","4":"4"],["1":"1","2":"2","3":"3","4":"4"],["1":"1","2":"2","3":"3","4":"4"],["1":"1","2":"2","3":"3","4":"4"],["1":"1","2":"2","3":"3","4":"4"]]
+        completion(array)
     }
     
 }
-
-
-
 

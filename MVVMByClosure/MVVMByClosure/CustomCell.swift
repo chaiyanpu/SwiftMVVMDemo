@@ -37,7 +37,7 @@ class CustomCell: UITableViewCell {
         return cell!
     }
     
-    var viewModel:ViewModel?{
+    var viewModel:CellViewModel?{
         didSet{
             viewModel?.imageAdress.observer {
                 [unowned self] adress in

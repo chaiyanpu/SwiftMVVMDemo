@@ -14,12 +14,12 @@
 		E640A7551DEC4FC4004ADB64 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E640A7531DEC4FC4004ADB64 /* LaunchScreen.storyboard */; };
 		E640A7601DEC4FC5004ADB64 /* MVVMByClosureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A75F1DEC4FC5004ADB64 /* MVVMByClosureTests.swift */; };
 		E640A76B1DEC4FC5004ADB64 /* MVVMByClosureUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A76A1DEC4FC5004ADB64 /* MVVMByClosureUITests.swift */; };
-		E640A7791DEC5011004ADB64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7781DEC5011004ADB64 /* ViewModel.swift */; };
-		E640A77B1DEC503A004ADB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77A1DEC503A004ADB64 /* Model.swift */; };
+		E640A7791DEC5011004ADB64 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7781DEC5011004ADB64 /* CellViewModel.swift */; };
+		E640A77B1DEC503A004ADB64 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77A1DEC503A004ADB64 /* CellModel.swift */; };
 		E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77C1DEC5184004ADB64 /* CustomCell.swift */; };
 		E640A77F1DEC5184004ADB64 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E640A77D1DEC5184004ADB64 /* CustomCell.xib */; };
 		E640A7811DEC565A004ADB64 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7801DEC565A004ADB64 /* Observable.swift */; };
-		E640A7831DEC5AEE004ADB64 /* ControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */; };
+		E640A7831DEC5AEE004ADB64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7821DEC5AEE004ADB64 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,12 +53,12 @@
 		E640A7661DEC4FC5004ADB64 /* MVVMByClosureUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMByClosureUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E640A76A1DEC4FC5004ADB64 /* MVVMByClosureUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMByClosureUITests.swift; sourceTree = "<group>"; };
 		E640A76C1DEC4FC5004ADB64 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E640A7781DEC5011004ADB64 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		E640A77A1DEC503A004ADB64 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		E640A7781DEC5011004ADB64 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		E640A77A1DEC503A004ADB64 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		E640A77C1DEC5184004ADB64 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		E640A77D1DEC5184004ADB64 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E640A7801DEC565A004ADB64 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
-		E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerHelper.swift; sourceTree = "<group>"; };
+		E640A7821DEC5AEE004ADB64 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,9 +113,9 @@
 				E640A77C1DEC5184004ADB64 /* CustomCell.swift */,
 				E640A77D1DEC5184004ADB64 /* CustomCell.xib */,
 				E640A74C1DEC4FC4004ADB64 /* ViewController.swift */,
-				E640A7821DEC5AEE004ADB64 /* ControllerHelper.swift */,
-				E640A7781DEC5011004ADB64 /* ViewModel.swift */,
-				E640A77A1DEC503A004ADB64 /* Model.swift */,
+				E640A7821DEC5AEE004ADB64 /* ViewModel.swift */,
+				E640A7781DEC5011004ADB64 /* CellViewModel.swift */,
+				E640A77A1DEC503A004ADB64 /* CellModel.swift */,
 				E640A74E1DEC4FC4004ADB64 /* Main.storyboard */,
 				E640A7511DEC4FC4004ADB64 /* Assets.xcassets */,
 				E640A74A1DEC4FC4004ADB64 /* AppDelegate.swift */,
@@ -281,13 +281,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E640A7831DEC5AEE004ADB64 /* ControllerHelper.swift in Sources */,
+				E640A7831DEC5AEE004ADB64 /* ViewModel.swift in Sources */,
 				E640A74D1DEC4FC4004ADB64 /* ViewController.swift in Sources */,
-				E640A7791DEC5011004ADB64 /* ViewModel.swift in Sources */,
+				E640A7791DEC5011004ADB64 /* CellViewModel.swift in Sources */,
 				E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */,
 				E640A74B1DEC4FC4004ADB64 /* AppDelegate.swift in Sources */,
 				E640A7811DEC565A004ADB64 /* Observable.swift in Sources */,
-				E640A77B1DEC503A004ADB64 /* Model.swift in Sources */,
+				E640A77B1DEC503A004ADB64 /* CellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
