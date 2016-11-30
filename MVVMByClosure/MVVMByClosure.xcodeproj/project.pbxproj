@@ -17,9 +17,13 @@
 		E640A7791DEC5011004ADB64 /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7781DEC5011004ADB64 /* CellViewModel.swift */; };
 		E640A77B1DEC503A004ADB64 /* CellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77A1DEC503A004ADB64 /* CellModel.swift */; };
 		E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A77C1DEC5184004ADB64 /* CustomCell.swift */; };
-		E640A77F1DEC5184004ADB64 /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E640A77D1DEC5184004ADB64 /* CustomCell.xib */; };
 		E640A7811DEC565A004ADB64 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7801DEC565A004ADB64 /* Observable.swift */; };
 		E640A7831DEC5AEE004ADB64 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7821DEC5AEE004ADB64 /* ViewModel.swift */; };
+		E640A7871DEDAA83004ADB64 /* dead.png in Resources */ = {isa = PBXBuildFile; fileRef = E640A7861DEDAA83004ADB64 /* dead.png */; };
+		E640A78B1DEE6A09004ADB64 /* HeadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A78A1DEE6A09004ADB64 /* HeadView.swift */; };
+		E640A78E1DEE6A5F004ADB64 /* HeadViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A78D1DEE6A5F004ADB64 /* HeadViewModel.swift */; };
+		E640A7901DEE6A7C004ADB64 /* HeadModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A78F1DEE6A7C004ADB64 /* HeadModel.swift */; };
+		E640A7921DEF07C9004ADB64 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7911DEF07C9004ADB64 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,9 +60,13 @@
 		E640A7781DEC5011004ADB64 /* CellViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
 		E640A77A1DEC503A004ADB64 /* CellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CellModel.swift; sourceTree = "<group>"; };
 		E640A77C1DEC5184004ADB64 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		E640A77D1DEC5184004ADB64 /* CustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		E640A7801DEC565A004ADB64 /* Observable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		E640A7821DEC5AEE004ADB64 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		E640A7861DEDAA83004ADB64 /* dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dead.png; sourceTree = "<group>"; };
+		E640A78A1DEE6A09004ADB64 /* HeadView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadView.swift; sourceTree = "<group>"; };
+		E640A78D1DEE6A5F004ADB64 /* HeadViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadViewModel.swift; sourceTree = "<group>"; };
+		E640A78F1DEE6A7C004ADB64 /* HeadModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeadModel.swift; sourceTree = "<group>"; };
+		E640A7911DEF07C9004ADB64 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,14 +118,14 @@
 			isa = PBXGroup;
 			children = (
 				E640A7801DEC565A004ADB64 /* Observable.swift */,
-				E640A77C1DEC5184004ADB64 /* CustomCell.swift */,
-				E640A77D1DEC5184004ADB64 /* CustomCell.xib */,
 				E640A74C1DEC4FC4004ADB64 /* ViewController.swift */,
 				E640A7821DEC5AEE004ADB64 /* ViewModel.swift */,
-				E640A7781DEC5011004ADB64 /* CellViewModel.swift */,
-				E640A77A1DEC503A004ADB64 /* CellModel.swift */,
+				E640A7911DEF07C9004ADB64 /* Model.swift */,
+				E640A7891DEE69D2004ADB64 /* Head */,
+				E640A7881DEE69C0004ADB64 /* Cell */,
 				E640A74E1DEC4FC4004ADB64 /* Main.storyboard */,
 				E640A7511DEC4FC4004ADB64 /* Assets.xcassets */,
+				E640A7861DEDAA83004ADB64 /* dead.png */,
 				E640A74A1DEC4FC4004ADB64 /* AppDelegate.swift */,
 				E640A7531DEC4FC4004ADB64 /* LaunchScreen.storyboard */,
 				E640A7561DEC4FC4004ADB64 /* Info.plist */,
@@ -141,6 +149,26 @@
 				E640A76C1DEC4FC5004ADB64 /* Info.plist */,
 			);
 			path = MVVMByClosureUITests;
+			sourceTree = "<group>";
+		};
+		E640A7881DEE69C0004ADB64 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E640A77C1DEC5184004ADB64 /* CustomCell.swift */,
+				E640A77A1DEC503A004ADB64 /* CellModel.swift */,
+				E640A7781DEC5011004ADB64 /* CellViewModel.swift */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		E640A7891DEE69D2004ADB64 /* Head */ = {
+			isa = PBXGroup;
+			children = (
+				E640A78A1DEE6A09004ADB64 /* HeadView.swift */,
+				E640A78D1DEE6A5F004ADB64 /* HeadViewModel.swift */,
+				E640A78F1DEE6A7C004ADB64 /* HeadModel.swift */,
+			);
+			name = Head;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,8 +282,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E640A7551DEC4FC4004ADB64 /* LaunchScreen.storyboard in Resources */,
+				E640A7871DEDAA83004ADB64 /* dead.png in Resources */,
 				E640A7521DEC4FC4004ADB64 /* Assets.xcassets in Resources */,
-				E640A77F1DEC5184004ADB64 /* CustomCell.xib in Resources */,
 				E640A7501DEC4FC4004ADB64 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,13 +309,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E640A78E1DEE6A5F004ADB64 /* HeadViewModel.swift in Sources */,
 				E640A7831DEC5AEE004ADB64 /* ViewModel.swift in Sources */,
 				E640A74D1DEC4FC4004ADB64 /* ViewController.swift in Sources */,
 				E640A7791DEC5011004ADB64 /* CellViewModel.swift in Sources */,
 				E640A77E1DEC5184004ADB64 /* CustomCell.swift in Sources */,
 				E640A74B1DEC4FC4004ADB64 /* AppDelegate.swift in Sources */,
 				E640A7811DEC565A004ADB64 /* Observable.swift in Sources */,
+				E640A78B1DEE6A09004ADB64 /* HeadView.swift in Sources */,
+				E640A7921DEF07C9004ADB64 /* Model.swift in Sources */,
 				E640A77B1DEC503A004ADB64 /* CellModel.swift in Sources */,
+				E640A7901DEE6A7C004ADB64 /* HeadModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +473,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RGKNBLUMCS;
 				INFOPLIST_FILE = MVVMByClosure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaiyanpu.MVVMByClosure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -454,6 +487,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = RGKNBLUMCS;
 				INFOPLIST_FILE = MVVMByClosure/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.chaiyanpu.MVVMByClosure;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -538,6 +572,7 @@
 				E640A7711DEC4FC5004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E640A7721DEC4FC5004ADB64 /* Build configuration list for PBXNativeTarget "MVVMByClosureTests" */ = {
 			isa = XCConfigurationList;
@@ -546,6 +581,7 @@
 				E640A7741DEC4FC5004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E640A7751DEC4FC5004ADB64 /* Build configuration list for PBXNativeTarget "MVVMByClosureUITests" */ = {
 			isa = XCConfigurationList;
@@ -554,6 +590,7 @@
 				E640A7771DEC4FC5004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

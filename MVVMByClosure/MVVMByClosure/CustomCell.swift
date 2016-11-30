@@ -12,11 +12,6 @@ class CustomCell: UITableViewCell {
     
     static let identifiler = "CustomCell"
     
-    @IBOutlet weak var labelThree: UILabel!
-    @IBOutlet weak var labelTwo: UILabel!
-    @IBOutlet weak var labelOne: UILabel!
-    @IBOutlet weak var customImageView: UIImageView!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,7 +26,7 @@ class CustomCell: UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: identifiler) as? CustomCell
         
         if cell == nil{
-            cell = CustomCell(style: UITableViewCellStyle.default, reuseIdentifier: identifiler)
+            cell = CustomCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: identifiler)
         }
         
         return cell!
@@ -39,25 +34,19 @@ class CustomCell: UITableViewCell {
     
     var viewModel:CellViewModel?{
         didSet{
+            viewModel?.lableOneText.observer {
+                [unowned self] in
+                self.textLabel?.text = $0
+            }
+            viewModel?.lableTwoText.observer {
+                [unowned self] in
+                self.detailTextLabel?.text = $0
+            }
             viewModel?.imageAdress.observer {
                 [unowned self] adress in
                 if adress != nil {
-                    self.customImageView.image = UIImage(named:adress!)
+                    self.imageView?.image = UIImage(named:adress!)
                 }
-            }
-            viewModel?.lableOneText.observer {
-                [unowned self] in
-                self.labelOne.text = $0
-            }
-            
-            viewModel?.lableTwoText.observer {
-                [unowned self] in
-                self.labelTwo.text = $0
-            }
-            
-            viewModel?.labelThreeText.observer {
-                [unowned self] in
-                self.labelThree.text = $0
             }
         }
     }

@@ -18,13 +18,11 @@ class CellViewModel{
     
     var lableTwoText:Observable<String>
     
-    var labelThreeText:Observable<String>
-    
-    init() {
-        imageAdress = Observable(emptyString)
-        lableOneText = Observable(emptyString)
-        lableTwoText = Observable(emptyString)
-        labelThreeText = Observable(emptyString)
+    init(_ model:CellModel) {
+        //处理数据逻辑
+        imageAdress = Observable(model.imageAdress)
+        lableOneText = Observable(model.lableOneText)
+        lableTwoText = Observable(model.lableTwoText)
     }
     
 }
