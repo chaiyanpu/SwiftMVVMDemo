@@ -29,20 +29,31 @@ class ViewModel{
         }
     }
     
-    ///请求 具体的转模型和请求应该放在另外的工具类里
-    private func getData(completion:(_ model:Model)->()){
+    ///请求 
+    func getData(completion:(_ model:Model)->()){
         //拿到数据
-        
+        RequestHelper.request { (array, timeString) in
+            //转模型
+            let cellModels:[CellModel] = array.map {
+                return CellModel($0["dead"] ?? "", lableOneText: $0["2"] ?? "", lableTwoText: $0["3"] ?? "")
+            }
+            
+            let headModel = HeadModel(timeText:"timeInterval:\(Date().timeIntervalSince1970)")
+            
+            completion(Model(headModel: headModel, cellModels: cellModels))
+        }
+    }
+    
+}
+
+//请求类
+class RequestHelper {
+    ///网络请求
+    class func request(completion:(_ array:[[String:String]],_ timeString:String)->()){
         let array = [["dead":"dead","2":"\(aNumberWillChange)","3":"3"],["dead":"dead","2":"\(aNumberWillChange)","3":"3"],["dead":"dead","2":"\(aNumberWillChange)","3":"3"],["dead":"dead","2":"\(aNumberWillChange)","3":"3"],["dead":"dead","2":"\(aNumberWillChange)","3":"3"],["dead":"dead","2":"\(aNumberWillChange)","3":"3"]]
         aNumberWillChange += 1000
-        //转模型
-        let cellModels:[CellModel] = array.map {
-            return CellModel($0["dead"] ?? "", lableOneText: $0["2"] ?? "", lableTwoText: $0["3"] ?? "")
-        }
         
-        let headModel = HeadModel(timeText:"timeInterval:\(Date().timeIntervalSince1970)")
-        
-        completion(Model(headModel: headModel, cellModels: cellModels))
+        completion(array,"timeInterval:\(Date().timeIntervalSince1970)")
     }
     
 }
