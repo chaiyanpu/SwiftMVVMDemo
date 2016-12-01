@@ -1,13 +1,12 @@
 //
 //  Model.swift
-//  MVVMByClosure
+//  MVVMByProtocol
 //
-//  Created by chai on 2016/11/30.
+//  Created by chai on 2016/12/1.
 //  Copyright © 2016年 chaiyanpu. All rights reserved.
-//  Model
+//
 
 import Foundation
-
 
 struct Model {
     

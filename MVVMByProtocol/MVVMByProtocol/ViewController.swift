@@ -1,15 +1,15 @@
 //
 //  ViewController.swift
-//  MVVMByClosure
+//  MVVMByProtocol
 //
-//  Created by chai on 2016/11/28.
+//  Created by chai on 2016/12/1.
 //  Copyright © 2016年 chaiyanpu. All rights reserved.
-//  View-Controller   cell数据没有双向绑定
+//
 
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     var aTableView:UITableView!
     var headView:HeadView!
     let headH:CGFloat = 80
@@ -22,7 +22,7 @@ class ViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string:"下拉刷新" )
         return refreshControl
     }()
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -62,11 +62,11 @@ class ViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
 }
 
 extension ViewController:UITableViewDataSource{
-
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.cellDatas.value.count
     }
