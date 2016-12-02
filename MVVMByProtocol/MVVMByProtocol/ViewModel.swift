@@ -12,12 +12,12 @@ import UIKit
 var aNumberWillChange = 0
 class ViewModel{
     
-    let cellDatas:Observable<[CellViewModel]>
-    let headViewModel:Observable<HeadViewModel?>
+    var cellDatas:[CellViewModel]
+    var headViewModel:HeadViewModel?
     
     init() {
-        self.cellDatas = Observable([])
-        self.headViewModel = Observable(nil)
+        cellDatas = []
+        headViewModel = nil
     }
     
     func requestData(completion:()->()){
@@ -25,8 +25,8 @@ class ViewModel{
             let cellViewModel = model.cellModels.map({ cellModel in
                 return CellViewModel(cellModel)
             })
-            headViewModel.value = HeadViewModel(model.headModel)
-            cellDatas.value = cellViewModel
+            headViewModel = HeadViewModel(model.headModel)
+            cellDatas = cellViewModel
             completion()
         }
     }
@@ -37,7 +37,7 @@ class ViewModel{
         RequestHelper.request { (array, timeString) in
             //转模型
             let cellModels:[CellModel] = array.map {
-                return CellModel($0["dead"] ?? "", lableOneText: $0["2"] ?? "", lableTwoText: $0["3"] ?? "")
+                return CellModel($0["dead"] ?? "", lableOneText: $0["2"] ?? "",lableTwoText:$0["3"] ?? "")
             }
             
             let headModel = HeadModel(timeText:"timeInterval:\(Date().timeIntervalSince1970)")

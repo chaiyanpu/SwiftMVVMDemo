@@ -21,12 +21,9 @@ class HeadView: UIView {
         addSubview(timeLabel)
     }
     
-    var headViewModel:HeadViewModel?{
+    var headViewModel:LabelPresentable?{
         didSet{
-            headViewModel?.timeText.observer {
-                [unowned self] in
-                self.timeLabel.text = $0
-            }
+           headViewModel?.updataLabelData(timeLabel)
         }
     }
     

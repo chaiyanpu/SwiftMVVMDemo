@@ -8,6 +8,8 @@
 
 import UIKit
 
+protocol CustomCellProtocol: LabelPresentable,ImageViewPresentable,SubLabelPresentable{}
+
 class CustomCell: UITableViewCell {
 
     static let identifiler = "CustomCell"
@@ -32,25 +34,14 @@ class CustomCell: UITableViewCell {
         return cell!
     }
     
-    var viewModel:CellViewModel?{
+    var customCellModel:CustomCellProtocol?{
         didSet{
-            viewModel?.lableOneText.observer {
-                [unowned self] in
-                self.textLabel?.text = $0
-            }
-            viewModel?.lableTwoText.observer {
-                [unowned self] in
-                self.detailTextLabel?.text = $0
-            }
-            viewModel?.imageAdress.observer {
-                [unowned self] adress in
-                if adress != nil {
-                    self.imageView?.image = UIImage(named:adress!)
-                }
-            }
+            customCellModel?.updataImageViewData(self.imageView!)
+            customCellModel?.updataLabelData(self.textLabel!)
+            customCellModel?.updataSublabelData(self.detailTextLabel!)
         }
     }
-    
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         

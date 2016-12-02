@@ -22,10 +22,9 @@ class ViewController: UIViewController {
         refreshControl.attributedTitle = NSAttributedString(string:"下拉刷新" )
         return refreshControl
     }()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         addHeadView()
         addTableView()
         self.refresh()
@@ -34,6 +33,7 @@ class ViewController: UIViewController {
     func refresh(){
         viewModel.requestData(completion:{
             [unowned self] in
+            self.headView.headViewModel = self.viewModel.headViewModel
             self.aTableView.reloadData()
             self.refreshControl.endRefreshing()
         })
@@ -41,10 +41,6 @@ class ViewController: UIViewController {
     
     func addHeadView(){
         headView = HeadView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width, height: headH))
-        viewModel.headViewModel.observer{
-            [unowned self] headViewModel in
-            self.headView.headViewModel = headViewModel
-        }
         view.addSubview(headView)
     }
     
@@ -68,12 +64,12 @@ class ViewController: UIViewController {
 extension ViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cellDatas.value.count
+        return viewModel.cellDatas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = CustomCell.getCustomCell(tableView: tableView)
-        cell.viewModel = viewModel.cellDatas.value[indexPath.row]
+        cell.customCellModel = viewModel.cellDatas[indexPath.row]
         return cell
     }
     

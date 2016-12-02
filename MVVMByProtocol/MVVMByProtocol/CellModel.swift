@@ -13,13 +13,11 @@ struct CellModel {
     let imageAdress:String
     
     let lableOneText:String
-    
     let lableTwoText:String
-    
     init(_ imageAdress:String,lableOneText:String,lableTwoText:String) {
         self.imageAdress = imageAdress
-        self.lableTwoText = lableTwoText
         self.lableOneText = lableOneText
+        self.lableTwoText = lableTwoText
     }
     
 }

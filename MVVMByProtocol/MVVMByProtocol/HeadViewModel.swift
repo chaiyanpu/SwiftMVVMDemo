@@ -8,11 +8,11 @@
 
 import Foundation
 
-class HeadViewModel{
+class HeadViewModel:LabelPresentable{
     
-    var timeText:Observable<String>
+    var title: String
     
     init(_ model:HeadModel) {
-        self.timeText = Observable(model.timeText)
+        self.title = model.timeText
     }
 }

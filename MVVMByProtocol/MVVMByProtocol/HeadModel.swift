@@ -9,8 +9,8 @@
 import Foundation
 
 
-struct HeadModel {
-    
+struct HeadModel{
+        
     let timeText:String
     
 }

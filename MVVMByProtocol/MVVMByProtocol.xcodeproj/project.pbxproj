@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E6266E311DF1AEAC0005BD7D /* dead.png in Resources */ = {isa = PBXBuildFile; fileRef = E6266E301DF1AEAC0005BD7D /* dead.png */; };
 		E640A7A01DEFBAA5004ADB64 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A79F1DEFBAA5004ADB64 /* AppDelegate.swift */; };
 		E640A7A21DEFBAA5004ADB64 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E640A7A11DEFBAA5004ADB64 /* ViewController.swift */; };
 		E640A7A51DEFBAA5004ADB64 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E640A7A31DEFBAA5004ADB64 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E6266E301DF1AEAC0005BD7D /* dead.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dead.png; sourceTree = "<group>"; };
 		E640A79C1DEFBAA5004ADB64 /* MVVMByProtocol.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMByProtocol.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E640A79F1DEFBAA5004ADB64 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E640A7A11DEFBAA5004ADB64 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 		E640A79E1DEFBAA5004ADB64 /* MVVMByProtocol */ = {
 			isa = PBXGroup;
 			children = (
+				E640A7DF1DF055E6004ADB64 /* CustomPresentable.swift */,
 				E640A79F1DEFBAA5004ADB64 /* AppDelegate.swift */,
 				E640A7A11DEFBAA5004ADB64 /* ViewController.swift */,
 				E640A7CD1DF053D8004ADB64 /* ViewModel.swift */,
@@ -122,6 +125,7 @@
 				E640A7D21DF0540B004ADB64 /* Head */,
 				E640A7D11DF053EA004ADB64 /* Cell */,
 				E640A7A31DEFBAA5004ADB64 /* Main.storyboard */,
+				E6266E301DF1AEAC0005BD7D /* dead.png */,
 				E640A7A61DEFBAA5004ADB64 /* Assets.xcassets */,
 				E640A7A81DEFBAA5004ADB64 /* LaunchScreen.storyboard */,
 				E640A7AB1DEFBAA5004ADB64 /* Info.plist */,
@@ -153,7 +157,6 @@
 				E640A7D91DF05462004ADB64 /* CustomCell.swift */,
 				E640A7DB1DF05470004ADB64 /* CellModel.swift */,
 				E640A7DD1DF0547C004ADB64 /* CellViewModel.swift */,
-				E640A7DF1DF055E6004ADB64 /* CustomPresentable.swift */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E640A7AA1DEFBAA5004ADB64 /* LaunchScreen.storyboard in Resources */,
+				E6266E311DF1AEAC0005BD7D /* dead.png in Resources */,
 				E640A7A71DEFBAA5004ADB64 /* Assets.xcassets in Resources */,
 				E640A7A51DEFBAA5004ADB64 /* Main.storyboard in Resources */,
 			);
@@ -566,6 +570,7 @@
 				E640A7C61DEFBAA6004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E640A7C71DEFBAA6004ADB64 /* Build configuration list for PBXNativeTarget "MVVMByProtocolTests" */ = {
 			isa = XCConfigurationList;
@@ -574,6 +579,7 @@
 				E640A7C91DEFBAA6004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E640A7CA1DEFBAA6004ADB64 /* Build configuration list for PBXNativeTarget "MVVMByProtocolUITests" */ = {
 			isa = XCConfigurationList;
@@ -582,6 +588,7 @@
 				E640A7CC1DEFBAA6004ADB64 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
