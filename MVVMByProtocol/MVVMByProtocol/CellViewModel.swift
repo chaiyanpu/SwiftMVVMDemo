@@ -7,7 +7,7 @@
 //
 
 import Foundation
-
+protocol CustomCellProtocol: LabelPresentable,ImageViewPresentable,SubLabelPresentable{}
 class CellViewModel:CustomCellProtocol{
     
     var title: String

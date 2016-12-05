@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol CustomCellProtocol: LabelPresentable,ImageViewPresentable,SubLabelPresentable{}
+
 
 class CustomCell: UITableViewCell {
 

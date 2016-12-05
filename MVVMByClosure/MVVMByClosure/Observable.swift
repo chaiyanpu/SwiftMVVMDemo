@@ -8,7 +8,6 @@
 
 import UIKit
 
-//观察者
 class Observable<T>{
     
     typealias Observer = (T) -> ()
